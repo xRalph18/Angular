@@ -1,1 +1,7 @@
-<p>plants-list works!</p>
+<h1>Komputery</h1>
+
+<ul class="">
+    <li *ngFor="let p of PlantsList">
+        <button [class.selected]="p===selectedPlant"(click)="onSelect(p)">{{p.PlantName}}</button>
+    </li>
+</ul>
