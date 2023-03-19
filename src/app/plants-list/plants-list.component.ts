@@ -9,12 +9,12 @@ import { PlantsService } from "../Services/plants.service";
 })
 export class PlantsListComponent {
 
-  constructor(private plantsService: PlantsService){
+  constructor(private plantsService: PlantsService) {
     this.PlantsList = plantsService.getPlants();
   }
 
   PlantsList: PlantModel[];
-  
+
   selectedPlant?: PlantModel;
 
   onSelect(plant: PlantModel): void {

@@ -1,7 +1,12 @@
-<h1>Komputery</h1>
-
-<ul class="">
-    <li *ngFor="let p of PlantsList">
-        <button [class.selected]="p===selectedPlant"(click)="onSelect(p)">{{p.PlantName}}</button>
-    </li>
-</ul>
+<div class="plant">
+    <div *ngFor="let p of PlantsList | slice:0:10;" class="card mb-3 w-50 m-auto">
+        <a href="#{{p.Id}}" class="link-dark-clear">
+            <div class="card-header">
+                <span class="ms-2">{{p.PlantName}} - ({{p.PlantScienceName}})</span>
+                <span class="position-absolute top-50 start-0 translate-middle py-3 badge bg-dark">
+                    {{p.Id}}
+                </span>
+            </div>
+        </a>
+    </div>
+</div>

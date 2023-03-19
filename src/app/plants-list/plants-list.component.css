@@ -1,0 +1,21 @@
+.plant {
+    
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.bg-light-gray {
+    background-color: #ddd;
+}
+
+.link-dark-clear {
+    text-decoration: none;
+    color: rgb(33, 37, 41);
+}
+
+.link-white-clear {
+    text-decoration: none;
+    color: #fff;
+}
