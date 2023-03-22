@@ -1,12 +1,28 @@
-<div class="plant">
-    <div *ngFor="let p of PlantsList | slice:0:10;" class="card mb-3 w-50 m-auto">
-        <a href="#{{p.Id}}" class="link-dark-clear">
-            <div class="card-header">
-                <span class="ms-2">{{p.PlantName}} - ({{p.PlantScienceName}})</span>
-                <span class="position-absolute top-50 start-0 translate-middle py-3 badge bg-dark">
-                    {{p.Id}}
-                </span>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center my-3 fw-bold">Lista roślin</h1>
+            
+            <div class="plant">
+                <div *ngFor="let p of PlantsList | paginate: { itemsPerPage: 10, currentPage: page }" class="card mb-3 w-50 m-auto">
+                    <a href="#{{p.Id}}" class="link-dark-clear">
+                        <div class="card-header">
+                            <span class="ms-2">{{p.PlantName}} - ({{p.PlantScienceName}})</span>
+                            <span class="position-absolute top-50 start-0 translate-middle py-3 badge bg-dark">
+                                {{p.Id}}
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            
+                <pagination-controls
+                    (pageChange)="onChangePage($event)"
+                    previousLabel=""
+                    nextLabel="">
+                </pagination-controls>
             </div>
-        </a>
+            
+        </div>
     </div>
 </div>

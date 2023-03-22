@@ -9,6 +9,8 @@ import { PlantsService } from "../Services/plants.service";
 })
 export class PlantsListComponent {
 
+  page: number = 1;
+
   constructor(private plantsService: PlantsService) {
     this.PlantsList = plantsService.getPlants();
   }
@@ -19,5 +21,9 @@ export class PlantsListComponent {
 
   onSelect(plant: PlantModel): void {
     this.selectedPlant = plant;
+  }
+
+  onChangePage(event: any){
+    this.page = event;
   }
 }

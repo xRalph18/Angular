@@ -1,0 +1,13 @@
+.img-style {
+    display: inline-block;
+    outline: 5px solid rgba(255, 255, 255, .5);
+    box-sizing: border-box;
+    outline-offset: -5px;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 8px 1px rgba(66, 68, 90, 1);
+}
+
+.img-center {
+    text-align: center;
+}
