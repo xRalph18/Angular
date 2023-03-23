@@ -1,11 +1,11 @@
-<div class="card mb-3 w-50 m-auto">
-    <div class="card-header" *ngIf="">
-        <span class="ms-2">[][]</span>
+<div class="card mt-3 w-50 m-auto">
+    <div class="card-header" *ngIf="Plant">
+        <span class="ms-2">{{Plant.PlantName}}</span>
         <span class="position-absolute top-50 start-0 translate-middle py-3 badge bg-dark">
-            [][]
+            {{Plant.Id}}
         </span>
     </div>
     <div class="card-body">
-        <span class="ms-2">Roślina [][] naukowo nazywana [][] należy do rodziny roślin [][] i występuje w [][].</span>
+        <span class="ms-2">Roślina "{{Plant.PlantName}}" naukowo nazywana "{{Plant.PlantScienceName}}" należy do rodziny "{{Plant.PlantFamily}}" i występuje w {{Plant.OccuranceCountry}}.</span>
     </div>
 </div>
