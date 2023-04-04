@@ -26,4 +26,9 @@ export class PlantsListComponent {
   onChangePage(event: any){
     this.page = event;
   }
+
+  Searching(e: any) {
+    console.log(e.target.value);
+    this.PlantsList = this.plantsService.getPlants().filter(p => p.PlantName.toLocaleLowerCase().replace(" ", "").includes(e.target.value.toLocaleLowerCase().replace(" ", "")));
+  }
 }
